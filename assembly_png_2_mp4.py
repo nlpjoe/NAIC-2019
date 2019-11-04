@@ -12,8 +12,10 @@ def process(folder):
     process_yuv.wait()
 
 if __name__ == '__main__':
-    sourcedir = '/data4/zjz_temp/datasets/SDR4K/val/Bicx4'
+    #### change here
+    sourcedir = '/data4/zjz_temp/datasets/SDR4K/val/result'
     submit = '/data4/zjz_temp/datasets/SDR4K/val/submit'
+    ####
     os.makedirs(submit, exist_ok=True)
     folders = [osp.join(sourcedir, f) for f in os.listdir(sourcedir)]
     pool = ThreadPool()
